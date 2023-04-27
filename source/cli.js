@@ -10,10 +10,12 @@ const cli = meow(
 		  $ conway_ink_js
 
 		Options
-			--name  Your name
+      --numRows  Number of rows
+			--numCols  Number of columns
+      --interval Loop interval
 
 		Examples
-		  $ conway_ink_js --name=Jane
+		  $ conway_ink_js --rows=10 --cols=10 --interval=150
 		  Hello, Jane
 	`,
 	{
@@ -21,4 +23,10 @@ const cli = meow(
 	},
 );
 
-render(<App name={cli.flags.name} />);
+render(
+	<App
+		numRows={cli.flags.numRows}
+		numCols={cli.flags.numCols}
+		interval={cli.flags.interval}
+	/>,
+);

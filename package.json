@@ -10,7 +10,7 @@
 	"scripts": {
 		"build": "babel --out-dir=dist source",
 		"dev": "babel --out-dir=dist --watch source",
-		"cli": "yarn build && NODE_NO_WARNINGS=1 node --loader=import-jsx dist/cli.js",
+    "cli": "yarn build && node dist/cli.js",
 		"test": "prettier --check . && xo && ava"
 	},
 	"files": [
